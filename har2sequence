@@ -82,7 +82,7 @@ if (defined $opt{'list-styles'}) {
     exit;
 }
 
-my @ignore_hosts = @{$opt{'ignore-hosts'}};
+my @ignore_hosts = defined $opt{'ignore-hosts'} ? @{$opt{'ignore-hosts'}} : ();
 
 my $file = shift;
 
@@ -257,6 +257,7 @@ sub generate_sequence {
 	# Host Header instead of IP
 	my $participant = '';
 	if (defined $opt{host}) {
+	    print "DEBUG: Using host: " . $connection->{host} . "\n";
 	    $participant = $connection->{host};
 	}
 	else {
