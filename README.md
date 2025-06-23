@@ -38,7 +38,7 @@ This script makes use of a number of perl modules. You can install these on a
 Debian based system using the following command:
 
     $ sudo apt-get install libfile-slurp-perl libdata-dump-perl \
-    libjson-pp-perl libtext-simpletable-perl libwww-perl
+    libjson-pp-perl libtext-simpletable-perl libwww-perl git
     $ git clone https://github.com/danieldavidson/har2sequence.git
     $ cd har2sequence
 
